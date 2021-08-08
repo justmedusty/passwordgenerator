@@ -8,13 +8,14 @@ public class Main {
         String yesOrNo;
 
         password = Password.createPassword();
-        System.out.printf("Your generated password is: %n %n %s %n", password);
+        System.out.printf("Your generated password is: %n %n%s %n %n", password);
 
         System.out.println("Do you want to generate another password? (Y/N)");
         yesOrNo = scan.nextLine();
         if (yesOrNo.equalsIgnoreCase("y") || yesOrNo.equalsIgnoreCase("yes"))
             main(args);
 
+        Password.clearPassword();
 
     }
 
